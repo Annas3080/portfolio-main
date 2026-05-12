@@ -92,21 +92,17 @@ TC-005 Login With Wrong Password
 # TC-006 | ไม่เลือก Role | Negative
 # ─────────────────────────────────────────────
 TC-006 Login Without Selecting Role
-    [Documentation]    ไม่เลือกระดับสมาชิก ระบบต้องแสดง "Wrong email or password or role"
+    [Documentation]    ไม่เลือกระดับสมาชิก ระบบต้องแสดง "Please select role" และกลับหน้า login
     [Tags]    negative    TC-006
     [Setup]    Open Browser And Go To Login Page
     [Teardown]    Close Browser
 
     Input Text        name:txt_email      ${ADMIN_EMAIL}
     Input Password    name:txt_password   ${ADMIN_PASSWORD}
-    # ไม่เลือก role — ค่า default เป็น "" → login_db.php เซ็ต $errorMsg แต่ไม่ redirect
-    # หน้าจะค้างที่ login_db.php และไม่มี session login ใดถูกเซ็ต
+    # ไม่เลือก role → ระบบ redirect กลับ index.php พร้อม error message
     Submit Login Form
-    Sleep    2s
-    Location Should Not Contain    admin/admin_home.php
-    Location Should Not Contain    student/student_home.php
-    Location Should Not Contain    in_personnel/in_personnel_home.php
-    Location Should Not Contain    out_personnel/out_personnel_home.php
+    Wait Until Page Contains    Please select role    10s
+    Location Should Contain    index.php
 
 *** Keywords ***
 Open Browser And Go To Login Page
