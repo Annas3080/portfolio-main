@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-05-12T11:30:45.282934" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="D:\Web\portfolio-main\Testing\login_tests">
+<suite id="s1-s1" name="Login" source="D:\Web\portfolio-main\Testing\login_tests\login.robot">
+<test id="s1-s1-t1" name="TC-001 Login Admin Successfully" line="29">
+<kw name="Open Browser And Go To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:45.492284" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/Fitness-swimming-master-main/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-12T11:30:45.491917" elapsed="1.292729"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-12T11:30:46.785097" elapsed="0.034824"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name:txt_email</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-12T11:30:46.820216" elapsed="0.022485"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:30:45.491037" elapsed="1.351812"/>
+</kw>
+<kw name="Fill Login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:46.844114" level="INFO">Typing text 'admin@gmail.com' into text field 'name:txt_email'.</msg>
+<arg>name:txt_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:30:46.843829" elapsed="0.105136"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:46.949682" level="INFO">Typing password into text field 'name:txt_password'.</msg>
+<msg time="2026-05-12T11:30:46.983295" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name:txt_password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:30:46.949268" elapsed="0.143654"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:47.093398" level="INFO">Selecting options from selection list 'name:txt_role' by value admin.</msg>
+<arg>name:txt_role</arg>
+<arg>${role}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-05-12T11:30:47.093129" elapsed="0.084245"/>
+</kw>
+<arg>${ADMIN_EMAIL}</arg>
+<arg>${ADMIN_PASSWORD}</arg>
+<arg>admin</arg>
+<status status="PASS" start="2026-05-12T11:30:46.843324" elapsed="0.334276"/>
+</kw>
+<kw name="Submit Login Form">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:47.179343" level="INFO">Clicking button 'name:btn_login'.</msg>
+<arg>name:btn_login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:30:47.178853" elapsed="0.298492"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-12T11:30:49.479809" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-12T11:30:47.479094" elapsed="2.000875"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:30:47.178281" elapsed="2.301818"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:49.485302" level="INFO">Current location contains 'admin/admin_home.php'.</msg>
+<arg>admin/admin_home.php</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-05-12T11:30:49.480374" elapsed="0.005087"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-12T11:30:49.485942" elapsed="2.109194"/>
+</kw>
+<doc>เข้าสู่ระบบด้วยสิทธิ์ผู้ดูแลระบบ</doc>
+<tag>positive</tag>
+<tag>TC-001</tag>
+<status status="PASS" start="2026-05-12T11:30:45.489452" elapsed="6.105967"/>
+</test>
+<test id="s1-s1-t2" name="TC-002 Login Student Successfully" line="42">
+<kw name="Open Browser And Go To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:51.597828" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/Fitness-swimming-master-main/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-12T11:30:51.597571" elapsed="1.238281"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-12T11:30:52.836235" elapsed="0.034117"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name:txt_email</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-12T11:30:52.870640" elapsed="0.105065"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:30:51.597200" elapsed="1.378706"/>
+</kw>
+<kw name="Fill Login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:52.977359" level="INFO">Typing text 'student@gmail.com' into text field 'name:txt_email'.</msg>
+<arg>name:txt_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:30:52.977006" elapsed="0.101088"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:53.078627" level="INFO">Typing password into text field 'name:txt_password'.</msg>
+<msg time="2026-05-12T11:30:53.108506" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name:txt_password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:30:53.078314" elapsed="0.078248"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:53.157254" level="INFO">Selecting options from selection list 'name:txt_role' by value student.</msg>
+<arg>name:txt_role</arg>
+<arg>${role}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-05-12T11:30:53.156882" elapsed="0.073850"/>
+</kw>
+<arg>${STUDENT_EMAIL}</arg>
+<arg>${STUDENT_PASSWORD}</arg>
+<arg>student</arg>
+<status status="PASS" start="2026-05-12T11:30:52.976411" elapsed="0.254470"/>
+</kw>
+<kw name="Submit Login Form">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:53.231795" level="INFO">Clicking button 'name:btn_login'.</msg>
+<arg>name:btn_login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:30:53.231565" elapsed="0.121150"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-12T11:30:55.353680" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-12T11:30:53.352992" elapsed="2.000838"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:30:53.231218" elapsed="2.122754"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:56.240382" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-12T11:30:56.240648" level="FAIL">Location should have contained 'student/student_home.php' but it was 'http://localhost/Fitness-swimming-master-main/index.php'.</msg>
+<arg>student/student_home.php</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="FAIL" start="2026-05-12T11:30:55.354269" elapsed="0.888998">Location should have contained 'student/student_home.php' but it was 'http://localhost/Fitness-swimming-master-main/index.php'.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-12T11:30:56.243876" elapsed="2.125141"/>
+</kw>
+<doc>เข้าสู่ระบบด้วยสิทธิ์นักศึกษา</doc>
+<tag>positive</tag>
+<tag>TC-002</tag>
+<status status="FAIL" start="2026-05-12T11:30:51.596078" elapsed="6.773198">Location should have contained 'student/student_home.php' but it was 'http://localhost/Fitness-swimming-master-main/index.php'.</status>
+</test>
+<test id="s1-s1-t3" name="TC-003 Login Personnel In Successfully" line="55">
+<kw name="Open Browser And Go To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:58.371524" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/Fitness-swimming-master-main/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-12T11:30:58.371261" elapsed="1.234528"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-12T11:30:59.606296" elapsed="0.104346"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name:txt_email</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-12T11:30:59.710960" elapsed="0.023483"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:30:58.370905" elapsed="1.363765"/>
+</kw>
+<kw name="Fill Login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:59.736260" level="INFO">Typing text 'personnel@gmail.com' into text field 'name:txt_email'.</msg>
+<arg>name:txt_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:30:59.735973" elapsed="0.117039"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:59.853583" level="INFO">Typing password into text field 'name:txt_password'.</msg>
+<msg time="2026-05-12T11:30:59.891763" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name:txt_password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:30:59.853267" elapsed="0.085086"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:30:59.938967" level="INFO">Selecting options from selection list 'name:txt_role' by value in_personnel.</msg>
+<arg>name:txt_role</arg>
+<arg>${role}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-05-12T11:30:59.938600" elapsed="0.080920"/>
+</kw>
+<arg>${PERSONNEL_EMAIL}</arg>
+<arg>${PERSONNEL_PASSWORD}</arg>
+<arg>in_personnel</arg>
+<status status="PASS" start="2026-05-12T11:30:59.735475" elapsed="0.284186"/>
+</kw>
+<kw name="Submit Login Form">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:00.020606" level="INFO">Clicking button 'name:btn_login'.</msg>
+<arg>name:btn_login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:00.020390" elapsed="0.129075"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-12T11:31:02.151285" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-12T11:31:00.149951" elapsed="2.001477"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:31:00.020059" elapsed="2.131502"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:02.899163" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-12T11:31:02.899436" level="FAIL">Location should have contained 'in_personnel/in_personnel_home.php' but it was 'http://localhost/Fitness-swimming-master-main/index.php'.</msg>
+<arg>in_personnel/in_personnel_home.php</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="FAIL" start="2026-05-12T11:31:02.151859" elapsed="0.748471">Location should have contained 'in_personnel/in_personnel_home.php' but it was 'http://localhost/Fitness-swimming-master-main/index.php'.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-12T11:31:02.900793" elapsed="2.120620"/>
+</kw>
+<doc>เข้าสู่ระบบด้วยสิทธิ์บุคลากรภายใน</doc>
+<tag>positive</tag>
+<tag>TC-003</tag>
+<status status="FAIL" start="2026-05-12T11:30:58.369818" elapsed="6.651853">Location should have contained 'in_personnel/in_personnel_home.php' but it was 'http://localhost/Fitness-swimming-master-main/index.php'.</status>
+</test>
+<test id="s1-s1-t4" name="TC-004 Login Personnel Out Successfully" line="68">
+<kw name="Open Browser And Go To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:05.023960" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/Fitness-swimming-master-main/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-12T11:31:05.023712" elapsed="1.227772"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-12T11:31:06.251749" elapsed="0.029495"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name:txt_email</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-12T11:31:06.281460" elapsed="0.075708"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:31:05.023380" elapsed="1.333996"/>
+</kw>
+<kw name="Fill Login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:06.358657" level="INFO">Typing text 'out@gmail.com' into text field 'name:txt_email'.</msg>
+<arg>name:txt_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:06.358398" elapsed="0.102081"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:06.461113" level="INFO">Typing password into text field 'name:txt_password'.</msg>
+<msg time="2026-05-12T11:31:06.492386" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name:txt_password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:06.460723" elapsed="0.078997"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:06.540434" level="INFO">Selecting options from selection list 'name:txt_role' by value out_personnel.</msg>
+<arg>name:txt_role</arg>
+<arg>${role}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-05-12T11:31:06.540065" elapsed="0.083488"/>
+</kw>
+<arg>${OUT_EMAIL}</arg>
+<arg>${OUT_PASSWORD}</arg>
+<arg>out_personnel</arg>
+<status status="PASS" start="2026-05-12T11:31:06.357881" elapsed="0.265840"/>
+</kw>
+<kw name="Submit Login Form">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:06.624698" level="INFO">Clicking button 'name:btn_login'.</msg>
+<arg>name:btn_login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:06.624475" elapsed="0.127419"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-12T11:31:08.752892" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-12T11:31:06.752201" elapsed="2.000857"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:31:06.624105" elapsed="2.129101"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:10.278620" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-12T11:31:10.278842" level="FAIL">Location should have contained 'out_personnel/out_personnel_home.php' but it was 'http://localhost/Fitness-swimming-master-main/index.php'.</msg>
+<arg>out_personnel/out_personnel_home.php</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="FAIL" start="2026-05-12T11:31:08.753565" elapsed="1.526061">Location should have contained 'out_personnel/out_personnel_home.php' but it was 'http://localhost/Fitness-swimming-master-main/index.php'.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-12T11:31:10.280111" elapsed="2.103228"/>
+</kw>
+<doc>เข้าสู่ระบบด้วยสิทธิ์บุคลากรภายนอก</doc>
+<tag>positive</tag>
+<tag>TC-004</tag>
+<status status="FAIL" start="2026-05-12T11:31:05.022202" elapsed="7.361362">Location should have contained 'out_personnel/out_personnel_home.php' but it was 'http://localhost/Fitness-swimming-master-main/index.php'.</status>
+</test>
+<test id="s1-s1-t5" name="TC-005 Login With Wrong Password" line="81">
+<kw name="Open Browser And Go To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:12.385646" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/Fitness-swimming-master-main/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-12T11:31:12.385373" elapsed="1.246130"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-12T11:31:13.631829" elapsed="0.116105"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name:txt_email</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-12T11:31:13.748202" elapsed="0.023263"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:31:12.384998" elapsed="1.386629"/>
+</kw>
+<kw name="Fill Login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:13.773389" level="INFO">Typing text 'admin@gmail.com' into text field 'name:txt_email'.</msg>
+<arg>name:txt_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:13.773064" elapsed="0.135156"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:13.908872" level="INFO">Typing password into text field 'name:txt_password'.</msg>
+<msg time="2026-05-12T11:31:13.946400" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name:txt_password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:13.908492" elapsed="0.083492"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:13.992473" level="INFO">Selecting options from selection list 'name:txt_role' by value admin.</msg>
+<arg>name:txt_role</arg>
+<arg>${role}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-05-12T11:31:13.992196" elapsed="0.082041"/>
+</kw>
+<arg>${ADMIN_EMAIL}</arg>
+<arg>${WRONG_PASSWORD}</arg>
+<arg>admin</arg>
+<status status="PASS" start="2026-05-12T11:31:13.772436" elapsed="0.301968"/>
+</kw>
+<kw name="Submit Login Form">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:14.075298" level="INFO">Clicking button 'name:btn_login'.</msg>
+<arg>name:btn_login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:14.075101" elapsed="0.135537"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-12T11:31:16.212672" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-12T11:31:14.211178" elapsed="2.001669"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:31:14.074762" elapsed="2.138233"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Wrong email or password or role</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-12T11:31:16.213317" elapsed="0.012551"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-12T11:31:16.226418" elapsed="2.117331"/>
+</kw>
+<doc>กรอก Password ผิด ระบบต้องแสดง "Wrong email or password or role"</doc>
+<tag>negative</tag>
+<tag>TC-005</tag>
+<status status="PASS" start="2026-05-12T11:31:12.384077" elapsed="5.960125"/>
+</test>
+<test id="s1-s1-t6" name="TC-006 Login Without Selecting Role" line="94">
+<kw name="Open Browser And Go To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:18.346404" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/Fitness-swimming-master-main/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-12T11:31:18.346160" elapsed="1.376844"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-12T11:31:19.723358" elapsed="0.025874"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name:txt_email</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-12T11:31:19.749506" elapsed="0.022408"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:31:18.345802" elapsed="1.426301"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:19.772836" level="INFO">Typing text 'admin@gmail.com' into text field 'name:txt_email'.</msg>
+<arg>name:txt_email</arg>
+<arg>${ADMIN_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:19.772471" elapsed="0.103097"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:19.876277" level="INFO">Typing password into text field 'name:txt_password'.</msg>
+<msg time="2026-05-12T11:31:19.904168" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name:txt_password</arg>
+<arg>${ADMIN_PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:19.875939" elapsed="0.077461"/>
+</kw>
+<kw name="Submit Login Form">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:19.954319" level="INFO">Clicking button 'name:btn_login'.</msg>
+<arg>name:btn_login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-12T11:31:19.954134" elapsed="0.116909"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-12T11:31:22.072328" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-12T11:31:20.071319" elapsed="2.001149"/>
+</kw>
+<status status="PASS" start="2026-05-12T11:31:19.953852" elapsed="2.118739"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2026-05-12T11:31:32.994107" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-12T11:31:32.994312" level="FAIL">Text 'Please select role' did not appear in 10 seconds.</msg>
+<arg>Please select role</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2026-05-12T11:31:22.072908" elapsed="10.922648">Text 'Please select role' did not appear in 10 seconds.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-12T11:31:32.996063" elapsed="2.102028"/>
+</kw>
+<doc>ไม่เลือกระดับสมาชิก ระบบต้องแสดง "Please select role"</doc>
+<tag>negative</tag>
+<tag>TC-006</tag>
+<status status="FAIL" start="2026-05-12T11:31:18.344716" elapsed="16.753620">Text 'Please select role' did not appear in 10 seconds.</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-05-12T11:31:35.099049" elapsed="0.000171"/>
+</kw>
+<status status="FAIL" start="2026-05-12T11:30:45.321134" elapsed="49.778125"/>
+</suite>
+<status status="FAIL" start="2026-05-12T11:30:45.284658" elapsed="49.815351"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="1" skip="0">negative</stat>
+<stat pass="1" fail="3" skip="0">positive</stat>
+<stat pass="1" fail="0" skip="0">TC-001</stat>
+<stat pass="0" fail="1" skip="0">TC-002</stat>
+<stat pass="0" fail="1" skip="0">TC-003</stat>
+<stat pass="0" fail="1" skip="0">TC-004</stat>
+<stat pass="1" fail="0" skip="0">TC-005</stat>
+<stat pass="0" fail="1" skip="0">TC-006</stat>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="2" fail="4" skip="0">Login Tests</stat>
+<stat name="Login" id="s1-s1" pass="2" fail="4" skip="0">Login Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
